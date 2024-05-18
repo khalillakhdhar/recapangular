@@ -13,3 +13,5 @@
  2-achat: (gérer via http): titre,prixunitaire,quantité,date
  3-income:titre,valeur,date;
 # composant modulaire
+# travail à faire 
+créer les interfaces et service pour ce code ainsi que les composants du module auth
