@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
-
+  email!: string;
+  mdp!: string;
+  grade?:string;
+//user:any;
 }
