@@ -9,6 +9,7 @@ users=JSON.parse(localStorage.getItem('users') ||'') || [];
   addUser(user:any){
     this.users.push(user);
     localStorage.setItem('users',JSON.stringify(this.users));
+    // inscription d'un utilisateur
   }
   getUsers(){
     return this.users;
@@ -25,6 +26,7 @@ return this.users[id];
     if(user){
       localStorage.setItem('connectedUser',this.users.indexOf(user));
       return this.users.indexOf(user);
+      // login d'utilisateur
 
     }
     return -1;

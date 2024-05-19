@@ -1,6 +1,6 @@
 <div class="container text-center">
     <h2>Inscription</h2>
-<form>
+<form (submit)="inscription()">
     <div class="form-group">
         <label for="nom">Nom</label>
         <input type="text" class="form-control" id="nom" [(ngModel)]="user.nom" name="nom">
@@ -21,7 +21,7 @@
         <label for="age">Âge</label>
         <input type="number" class="form-control" id="age" [(ngModel)]="user.age" name="age">
     </div>
-    <button type="submit" class="btn btn-primary">Enregistrer</button>
+    <button type="submit"  class="btn btn-primary">Enregistrer</button>
     <br>
     <a routerLink="../" class="btn btn-link">Se connecter</a>
 </form>
