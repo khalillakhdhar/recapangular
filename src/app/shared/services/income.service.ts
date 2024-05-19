@@ -6,7 +6,14 @@ import { Injectable } from '@angular/core';
 export class IncomeService {
 
 incomes: any =  [];
+
+
   constructor() { 
+// verifier si incomes existe dans le local storage
+    if(!localStorage.getItem('incomes')){
+      localStorage.setItem('incomes',JSON.stringify([]));
+    }
+        
     this.incomes=this.getIncomes();
     console.log("incomes",this.incomes);
   }

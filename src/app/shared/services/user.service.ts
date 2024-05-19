@@ -5,6 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class UserService {
 users=JSON.parse(localStorage.getItem('users') ||'') || [];
+
   constructor() { }
   addUser(user:any){
     this.users.push(user);

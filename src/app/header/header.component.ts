@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from '../shared/services/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -9,10 +10,12 @@ import { Router } from '@angular/router';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-  constructor(private route:Router) { }
+  constructor(private route:Router,private authService:AuthService) { }
   logout(){
     localStorage.removeItem('connectedUser');
+    localStorage.removeItem('incomes')
     this.route.navigate(['../login']);
+    this.authService.logout();
   }
 
 }

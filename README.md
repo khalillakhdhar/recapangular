@@ -17,3 +17,4 @@
 créer les interfaces et service pour ce code ainsi que les composants du module auth
 liez le services user avec les composants de auth
 ajouter un income dans localstorage
+créer le code des interface graphique et injection des composant pour addachat et listachats

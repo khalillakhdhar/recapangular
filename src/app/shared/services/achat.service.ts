@@ -17,12 +17,15 @@ url="https://647f3d36c246f166da90635e.mockapi.io/achat" // fake backend api
     return this.http.delete(this.url+"/"+id);
   }
   calculeAchats(){
-    let total=0;
     this.getAchats().subscribe((data:any)=>{
+      let total=0;
       data.forEach((a:any)=>{
         total+=a.montant*a.quantite;
       })
-    })
-    return total;
+      console.log("total",total);
+      return total;
+    }
+    );
+    return 0;
   }
 }

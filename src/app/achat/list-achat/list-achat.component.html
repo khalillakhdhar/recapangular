@@ -1,1 +1,24 @@
-<p>list-achat works!</p>
+<h2>Liste des achats: ({{somme}})</h2>
+<table class="table table-bordered table-responsive">
+    <thead>
+        <tr>
+            <th>Titre</th>
+            <th>Quantité</th>
+            <th>Montant</th>
+            <th>Date</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let achat of achats">
+            <td>{{achat.titre}}</td>
+            <td>{{achat.quantite}}</td>
+            <td>{{achat.montant}}</td>
+            
+            <td>{{achat.date}}</td>
+            <td>
+                <button class="btn btn-danger" (click)="deleteAchat(achat.id)">Supprimer</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

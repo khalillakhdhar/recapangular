@@ -1,1 +1,31 @@
-<p>add-achat works!</p>
+
+<div class="container  text-center">
+    <div class="row">
+        <div class="col"></div>
+    
+        <div class="col-6">
+            <form>
+                <div class="form-group">
+                    <label for="montant">Montant</label>
+                    <input type="number" class="form-control" id="montant" [(ngModel)]="achat.montant" name="montant">
+                </div>
+                <div class="form-group">
+                    <label for="source">Titre</label>
+                    <input type="text" class="form-control" id="source" [(ngModel)]="achat.titre" name="source">
+                </div>
+                <div>
+                    <label for="quantite">Quantité:</label>
+                    <input type="number" class="form-control" id="quantite" [(ngModel)]="achat.quantite" name="quantite">
+                </div>
+                <div class="form-group">
+                    <label for="date">Date</label>
+                    <input type="date" class="form-control" id="date" [(ngModel)]="achat.date" name="date">
+                </div>
+                <button type="submit" class="btn btn-primary" (click)="addAchat()">Ajouter</button>
+                <br>
+            
+            </form>        </div>
+    
+        <div class="col"></div>
+    </div>
+    </div>
