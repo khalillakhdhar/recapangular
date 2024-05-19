@@ -1,5 +1,6 @@
 export interface Income {
     titre:string;
     montant:number;
-    date:number;
+    //date:number;
+    date:string;
 }
