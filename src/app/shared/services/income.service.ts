@@ -4,14 +4,18 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class IncomeService {
-incomes=JSON.parse(localStorage.getItem('incomes') ||'') || [];
-  constructor() { }
+
+incomes: any =  [];
+  constructor() { 
+    this.incomes=this.getIncomes();
+    console.log("incomes",this.incomes);
+  }
   addIncome(income:any){
     this.incomes.push(income);
     localStorage.setItem('incomes',JSON.stringify(this.incomes));
   }
   getIncomes(){
-    return this.incomes;
+    return JSON.parse(localStorage.getItem('incomes') ||'') || [];
   }
   deleteIncome(id:number){
     this.incomes.splice(id,1);

@@ -1,1 +1,21 @@
-<p>list-incomes works!</p>
+<h2>Liste des revenus: ({{somme}}) en total</h2>
+<table class="table table-bordered table-responsive">
+<thead>
+<tr>
+<th>Montant</th>
+<th>Titre</th>
+<th>Date</th>
+<th>Actions</th>
+</tr>
+</thead>
+<tbody>
+<tr *ngFor="let income of incomes">
+    <td>{{income.montant}}</td>
+    <td>{{income.titre}}</td>
+    <td>{{income.date}}</td>
+    <td>
+        <button class="btn btn-danger" (click)="deleteIncome(income.id)">Supprimer</button>
+    </td>
+    </tr>
+</tbody>
+</table>
